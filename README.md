@@ -7,8 +7,11 @@ for compliance should be met in practice.
 
 ## Quick Start ##
 
+To use `netns`, add the dependencies to your `Cargo.toml`
+```toml
 [dependencies]
 netns = { git = 'https://github.com/inkhare/netns' }
+```
 
 Testing (requires root):
 
