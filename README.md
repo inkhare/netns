@@ -10,7 +10,7 @@ for compliance should be met in practice.
 To use `netns`, add the dependencies to your `Cargo.toml`
 ```toml
 [dependencies]
-netns = { git = 'https://github.com/inkhare/netns' }
+netns = { git = 'https://github.com/inkhare/netns', branch = 'stable' }
 ```
 
 Testing (requires root):
@@ -22,7 +22,6 @@ Testing (requires root):
 ```Rust
 use std::process::Command;
 
-use netns::NetNS;
 use netns::{apply_in_ns, ExecStatus};
 
 fn main() {
