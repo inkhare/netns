@@ -197,8 +197,6 @@ fn desc(errno: Errno) -> &'static str {
         #[cfg(any(
             target_os = "linux",
             target_os = "android",
-            target_os = "illumos",
-            target_os = "solaris",
             target_os = "fuchsia"
         ))]
         libc::EL2HLT => "Level 2 halted",
@@ -248,8 +246,6 @@ fn desc(errno: Errno) -> &'static str {
         #[cfg(any(
             target_os = "linux",
             target_os = "android",
-            target_os = "illumos",
-            target_os = "solaris",
             target_os = "fuchsia"
         ))]
         libc::ENOLINK => "Link has been severed",
@@ -378,46 +374,46 @@ fn desc(errno: Errno) -> &'static str {
         libc::EHWPOISON => "Memory page has hardware error",
 
         #[cfg(any(target_os = "macos", target_os = "ios",))]
-        libc::ENEEDAUTH => "Need authenticator",
+        libc::ENEEDAUTH => "need authenticator",
 
         #[cfg(any(target_os = "macos", target_os = "ios",))]
-        libc::EOVERFLOW => "Value too large to be stored in data type",
+        libc::EOVERFLOW => "value too large to be stored in data type",
 
         #[cfg(any(target_os = "macos", target_os = "ios",))]
-        libc::EILSEQ => "Illegal byte sequence",
+        libc::EILSEQ => "illegal byte sequence",
 
         #[cfg(any(target_os = "macos", target_os = "ios",))]
-        libc::ENOATTR => "Attribute not found",
+        libc::ENOATTR => "attribute not found",
 
         #[cfg(any(target_os = "macos", target_os = "ios",))]
-        libc::EBADMSG => "Bad message",
+        libc::EBADMSG => "bad message",
 
         #[cfg(any(target_os = "macos", target_os = "ios",))]
-        libc::EPROTO => "Protocol error",
+        libc::EPROTO => "protocol error",
 
         #[cfg(any(target_os = "macos", target_os = "ios",))]
-        libc::ENOTRECOVERABLE => "State not recoverable",
+        libc::ENOTRECOVERABLE => "state not recoverable",
 
         #[cfg(any(target_os = "macos", target_os = "ios",))]
-        libc::EOWNERDEAD => "Previous owner died",
+        libc::EOWNERDEAD => "previous owner died",
 
         #[cfg(any(target_os = "macos", target_os = "ios",))]
-        libc::ENOTSUP => "Operation not supported",
+        libc::ENOTSUP => "operation not supported",
 
         #[cfg(any(target_os = "macos", target_os = "ios",))]
-        libc::EPROCLIM => "Too many processes",
+        libc::EPROCLIM => "too many processes",
 
         #[cfg(any(target_os = "macos", target_os = "ios",))]
-        libc::EUSERS => "Too many users",
+        libc::EUSERS => "too many users",
 
         #[cfg(any(target_os = "macos", target_os = "ios",))]
-        libc::EDQUOT => "Disc quota exceeded",
+        libc::EDQUOT => "disc quota exceeded",
 
         #[cfg(any(target_os = "macos", target_os = "ios",))]
-        libc::ESTALE => "Stale NFS file handle",
+        libc::ESTALE => "stale NFS file handle",
 
         #[cfg(any(target_os = "macos", target_os = "ios",))]
-        libc::EREMOTE => "Too many levels of remote in path",
+        libc::EREMOTE => "too many levels of remote in path",
 
         #[cfg(any(target_os = "macos", target_os = "ios",))]
         EBADRPC => "RPC struct is bad",
@@ -429,64 +425,64 @@ fn desc(errno: Errno) -> &'static str {
         EPROGUNAVAIL => "RPC prog. not avail",
 
         #[cfg(any(target_os = "macos", target_os = "ios",))]
-        EPROGMISMATCH => "Program version wrong",
+        EPROGMISMATCH => "program version wrong",
 
         #[cfg(any(target_os = "macos", target_os = "ios",))]
-        EPROCUNAVAIL => "Bad procedure for program",
+        EPROCUNAVAIL => "bad procedure for program",
 
         #[cfg(any(target_os = "macos", target_os = "ios",))]
-        EFTYPE => "Inappropriate file type or format",
+        EFTYPE => "inappropriate file type or format",
 
         #[cfg(any(target_os = "macos", target_os = "ios",))]
-        EAUTH => "Authentication error",
+        EAUTH => "authentication error",
 
         #[cfg(any(target_os = "macos", target_os = "ios",))]
-        ECANCELED => "Operation canceled",
+        ECANCELED => "operation canceled",
 
         #[cfg(any(target_os = "macos", target_os = "ios"))]
-        EPWROFF => "Device power is off",
+        EPWROFF => "device power is off",
 
         #[cfg(any(target_os = "macos", target_os = "ios"))]
-        EDEVERR => "Device error, e.g. paper out",
+        EDEVERR => "device error",
 
         #[cfg(any(target_os = "macos", target_os = "ios"))]
-        libc::EBADEXEC => "Bad executable",
+        libc::EBADEXEC => "bad executable (or shared library)",
 
         #[cfg(any(target_os = "macos", target_os = "ios"))]
-        libc::EBADARCH => "Bad CPU type in executable",
+        libc::EBADARCH => "bad CPU type in executable",
 
         #[cfg(any(target_os = "macos", target_os = "ios"))]
-        libc::ESHLIBVERS => "Shared library version mismatch",
+        libc::ESHLIBVERS => "shared library version mismatch",
 
         #[cfg(any(target_os = "macos", target_os = "ios"))]
-        libc::EBADMACHO => "Malformed Macho file",
+        libc::EBADMACHO => "malformed Mach-o file",
 
         #[cfg(any(target_os = "macos", target_os = "ios"))]
         libc::EMULTIHOP => "Reserved",
 
         #[cfg(any(target_os = "macos", target_os = "ios",))]
-        libc::ENODATA => "No message available on STREAM",
+        libc::ENODATA => "no message available on STREAM",
 
         #[cfg(any(target_os = "macos", target_os = "ios"))]
         libc::ENOLINK => "Reserved",
 
         #[cfg(any(target_os = "macos", target_os = "ios",))]
-        libc::ENOSR => "No STREAM resources",
+        libc::ENOSR => "no STREAM resources",
 
         #[cfg(any(target_os = "macos", target_os = "ios",))]
-        libc::ENOSTR => "Not a STREAM",
+        libc::ENOSTR => "not a STREAM",
 
         #[cfg(any(target_os = "macos", target_os = "ios",))]
         libc::ETIME => "STREAM ioctl timeout",
 
         #[cfg(any(target_os = "macos", target_os = "ios",))]
-        libc::EOPNOTSUPP => "Operation not supported on socket",
+        libc::EOPNOTSUPP => "operation not supported on socket",
 
         #[cfg(any(target_os = "macos", target_os = "ios"))]
-        libc::ENOPOLICY => "No such policy registered",
+        libc::ENOPOLICY => "policy not found",
 
         #[cfg(any(target_os = "macos", target_os = "ios"))]
-        libc::EQFULL => "Interface output queue is full",
+        libc::EQFULL => "interface output queue is full",
 
         _ => "unknown",
     }
